@@ -31,3 +31,4 @@ function getPhoenetic(array) {
 
   return res;
 }
+console.log(getPhoenetic(process.argv.slice(2)));
