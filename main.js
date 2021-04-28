@@ -14,5 +14,20 @@ function getPhoenetic(array) {
 
   let res = [];
 
+  for (let num of array) {
+    if (num <= 9) {
+      res.push(equivalence[num]);
+    } else {
+      let tempArray = [];
+      let numToStr = num.toString().split("");
+
+      for (str of numToStr) {
+        tempArray.push(equivalence[str]);
+      }
+
+      res.push(tempArray.join(""));
+    }
+  }
+
   return res;
 }
